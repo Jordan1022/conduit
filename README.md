@@ -33,13 +33,13 @@ SUPABASE_SERVICE_ROLE_KEY=
 
 Use the service role key only locally or in trusted server-side environments. Never prefix it with `NEXT_PUBLIC_`.
 
-Preview the seed counts without writing:
+Preview the seed counts without writing. This only requires `SUPABASE_URL` or `NEXT_PUBLIC_SUPABASE_URL`:
 
 ```bash
 npm run seed:supabase:dry
 ```
 
-Write or update the seeded rows:
+Write or update the seeded rows. This requires `SUPABASE_SERVICE_ROLE_KEY`:
 
 ```bash
 npm run seed:supabase
