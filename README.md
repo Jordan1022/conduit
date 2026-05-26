@@ -20,6 +20,31 @@ NEXT_PUBLIC_SUPABASE_URL=
 NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=
 ```
 
+## Seed Supabase
+
+1. Create a Supabase project.
+2. Run `supabase/schema.sql` in the Supabase SQL Editor to create the demo tables, RLS policies, and initial rows.
+3. Add local seed credentials:
+
+```bash
+SUPABASE_URL=
+SUPABASE_SERVICE_ROLE_KEY=
+```
+
+Use the service role key only locally or in trusted server-side environments. Never prefix it with `NEXT_PUBLIC_`.
+
+Preview the seed counts without writing:
+
+```bash
+npm run seed:supabase:dry
+```
+
+Write or update the seeded rows:
+
+```bash
+npm run seed:supabase
+```
+
 To use live AI draft generation, set:
 
 ```bash
