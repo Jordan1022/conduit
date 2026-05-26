@@ -143,7 +143,7 @@ export function ConduitApp({ initialData }: { initialData: DemoData }) {
       <section className="workspace">
         <header className="topbar">
           <div>
-            <p className="microcopy">Servant member workspace</p>
+            <p className="microcopy">Private member workspace</p>
             <h1>Referral intelligence for trusted operators</h1>
           </div>
           <div className="member-chip">

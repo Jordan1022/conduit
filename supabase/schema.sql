@@ -54,7 +54,7 @@ create policy "demo read activity" on public.activity for select to anon using (
 
 insert into public.members (id, name, role, company, location, expertise, trust_signals, availability, relationship_strength)
 values
-  ('member-maya', 'Maya Chen', 'Founder', 'Northstar Labs', 'Austin', array['B2B SaaS', 'operator network', 'product strategy'], array['Servant founding circle', '3 accepted referrals', 'direct operator overlap'], 'Open', 88),
+  ('member-maya', 'Maya Chen', 'Founder', 'Northstar Labs', 'Austin', array['B2B SaaS', 'operator network', 'product strategy'], array['Founding member circle', '3 accepted referrals', 'direct operator overlap'], 'Open', 88),
   ('member-lena', 'Lena Ortiz', 'Fractional CFO', 'Atlas Finance Partners', 'Dallas', array['fractional finance', 'Series A readiness', 'SaaS metrics', 'board reporting'], array['prior accepted referral', 'direct operator overlap', 'worked with two members'], 'Selective', 94),
   ('member-darius', 'Darius Patel', 'Managing Partner', 'Kinetic Growth', 'Chicago', array['go-to-market', 'RevOps', 'pricing', 'CRM systems'], array['closed 2 network deals', 'agency partner overlap'], 'Open', 81),
   ('member-evelyn', 'Evelyn Brooks', 'Principal', 'Summit Talent', 'Nashville', array['executive search', 'finance leaders', 'private equity operators'], array['vetted service provider', 'member sponsor verified'], 'Limited', 76),
@@ -69,7 +69,7 @@ on conflict (id) do nothing;
 
 insert into public.referrals (id, opportunity_id, from_member_id, to_member_id, status, note)
 values
-  ('ref-001', 'opp-fractional-cfo', 'member-maya', 'member-lena', 'accepted', 'Lena previously helped a Servant member build a board-ready finance model.'),
+  ('ref-001', 'opp-fractional-cfo', 'member-maya', 'member-lena', 'accepted', 'Lena previously helped a network member build a board-ready finance model.'),
   ('ref-002', 'opp-revops', 'member-maya', 'member-darius', 'sent', 'Darius is reviewing the GTM systems brief.')
 on conflict (id) do nothing;
 

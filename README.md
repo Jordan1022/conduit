@@ -1,6 +1,6 @@
 # Conduit
 
-Conduit is a Vercel-ready AI referral intelligence demo for a private member network. It shows how a Servant-style platform can turn a trusted ask into ranked matches, a double opt-in intro draft, and a referral outcome trail.
+Conduit is a Vercel-ready AI referral intelligence demo for a private member network. It shows how a trusted operator community can turn a high-value ask into ranked matches, a double opt-in intro draft, and a referral outcome trail.
 
 ## Run locally
 

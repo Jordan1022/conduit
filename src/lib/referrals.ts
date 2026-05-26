@@ -42,7 +42,7 @@ export function rankReferralMatches(
 }
 
 export function createIntroDraft(opportunity: Opportunity, match: ReferralMatch): string {
-  return `Maya, here is a double opt-in draft for ${match.member.name}: ${match.member.name}, I am checking whether you would be open to an introduction to a trusted Servant member who needs help with ${opportunity.title.toLowerCase()}. The request is ${opportunity.urgency.toLowerCase()}, and the strongest fit is your work across ${match.member.expertise.slice(0, 3).join(", ")}. If useful, I can send a concise company brief before making the introduction.`;
+  return `Maya, here is a double opt-in draft for ${match.member.name}: ${match.member.name}, I am checking whether you would be open to an introduction to a trusted operator in the network who needs help with ${opportunity.title.toLowerCase()}. The request is ${opportunity.urgency.toLowerCase()}, and the strongest fit is your work across ${match.member.expertise.slice(0, 3).join(", ")}. If useful, I can send a concise company brief before making the introduction.`;
 }
 
 function normalizedOverlap(left: string, right: string): boolean {

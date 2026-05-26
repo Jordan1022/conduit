@@ -9,7 +9,7 @@ export const seedData: DemoData = {
       company: "Northstar Labs",
       location: "Austin",
       expertise: ["B2B SaaS", "operator network", "product strategy"],
-      trustSignals: ["Servant founding circle", "3 accepted referrals", "direct operator overlap"],
+      trustSignals: ["Founding member circle", "3 accepted referrals", "direct operator overlap"],
       availability: "Open",
       relationshipStrength: 88,
     },
@@ -87,7 +87,7 @@ export const seedData: DemoData = {
       fromMemberId: "member-maya",
       toMemberId: "member-lena",
       status: "accepted",
-      note: "Lena previously helped a Servant member build a board-ready finance model.",
+      note: "Lena previously helped a network member build a board-ready finance model.",
     },
     {
       id: "ref-002",
