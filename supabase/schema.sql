@@ -47,6 +47,11 @@ grant select on public.opportunities to anon;
 grant select on public.referrals to anon;
 grant select on public.activity to anon;
 
+grant all on public.members to service_role;
+grant all on public.opportunities to service_role;
+grant all on public.referrals to service_role;
+grant all on public.activity to service_role;
+
 create policy "demo read members" on public.members for select to anon using (true);
 create policy "demo read opportunities" on public.opportunities for select to anon using (true);
 create policy "demo read referrals" on public.referrals for select to anon using (true);

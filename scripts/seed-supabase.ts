@@ -113,5 +113,15 @@ function formatSeedError(table: string, message: string) {
     ].join("\n");
   }
 
+  if (message.includes("permission denied")) {
+    return [
+      `Failed to seed ${table}: ${message}`,
+      "",
+      "Your Supabase key reached the project, but the database role does not have write privileges on the table.",
+      "Run the latest supabase/schema.sql in the Supabase SQL Editor, or at minimum run:",
+      "grant all on public.members, public.opportunities, public.referrals, public.activity to service_role;",
+    ].join("\n");
+  }
+
   return `Failed to seed ${table}: ${message}`;
 }
