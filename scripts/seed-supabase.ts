@@ -84,7 +84,7 @@ async function main() {
     const { error } = await supabase.from(table).upsert(rows, { onConflict: "id" });
 
     if (error) {
-      throw new Error(`Failed to seed ${table}: ${error.message}`);
+      throw new Error(formatSeedError(table, error.message));
     }
 
     console.log(`Seeded ${rows.length} ${table} rows.`);
@@ -102,3 +102,16 @@ main().catch((error) => {
   console.error(error);
   process.exit(1);
 });
+
+function formatSeedError(table: string, message: string) {
+  if (message.includes("Could not find the table")) {
+    return [
+      `Failed to seed ${table}: ${message}`,
+      "",
+      "The Supabase tables do not exist yet, or your env vars point at a different Supabase project.",
+      "Run supabase/schema.sql in the Supabase SQL Editor first, then rerun npm run seed:supabase.",
+    ].join("\n");
+  }
+
+  return `Failed to seed ${table}: ${message}`;
+}
